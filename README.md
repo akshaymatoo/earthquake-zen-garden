@@ -9,3 +9,5 @@ React app to display earthquake data
 - touch app/index.css
 - npm i --save-dev @babel/core @babel/preset-env @babel/preset-react webpack webpack-cli webpack-dev-server babel-loader css-loader style-loader html-webpack-plugin
 
+# How to start the project
+`npm run start`
