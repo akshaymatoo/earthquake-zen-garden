@@ -1,0 +1,13 @@
+ul{
+	list-style-type: none;
+}
+.navigation {
+	background-color: #ededed;
+	display: flex;
+	justify-content:space-between;
+	padding: 2em
+}
+
+.navigation__title{
+	font-size: 12em
+}

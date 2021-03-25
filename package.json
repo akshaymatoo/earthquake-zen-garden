@@ -1,0 +1,44 @@
+{
+  "name": "earthquake-zen-garden",
+  "version": "1.0.0",
+  "description": "React app to display data",
+  "main": "index.js",
+  "babel":{
+    "presets":[
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "scripts": {
+    "create":"webpack",
+    "start":"webpack serve --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akshaymatoo/earthquake-zen-garden.git"
+  },
+  "keywords": [],
+  "author": "Akshay Mattoo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akshaymatoo/earthquake-zen-garden/issues"
+  },
+  "homepage": "https://github.com/akshaymatoo/earthquake-zen-garden#readme",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.12",
+    "@babel/preset-react": "^7.12.13",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.0",
+    "html-webpack-plugin": "^5.3.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.28.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
