@@ -10,4 +10,4 @@ React app to display earthquake data
 - npm i --save-dev @babel/core @babel/preset-env @babel/preset-react webpack webpack-cli webpack-dev-server babel-loader css-loader style-loader html-webpack-plugin
 
 # How to start the project
-`npm run start`
+`npm run start` this will start the project at port 3000. To change the port change the port in `scripts -> start` section in `package.json`.
