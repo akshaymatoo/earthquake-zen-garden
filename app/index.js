@@ -12,13 +12,13 @@ class App extends React.Component {
     super();
     this.state = {
     	data:{},
-      header:{}
+      navigation:{}
     };
   }
   componentDidMount(){
   	this.setState({
   		data,
-      header:{
+      navigation:{
         logoImage:data.site.logoImage,
         firstName:data.profile.firstName
       }
@@ -29,8 +29,8 @@ class App extends React.Component {
 		return (
 			<div className='app'> 
 				<Router>
-					<Header profile={this.state.header}/>
-					<Table data={data}/>
+					<Header navigation={this.state.navigation}/>
+					
 					<div className='app__body'>
 						<Switch>
               <Route path="/profile/:profileID">
@@ -39,6 +39,10 @@ class App extends React.Component {
 
               <Route path="/details/:ID">
                 <Details />
+              </Route>
+
+              <Route path="/">
+                <Table data={data}/>
               </Route>
             </Switch>
 					</div>
