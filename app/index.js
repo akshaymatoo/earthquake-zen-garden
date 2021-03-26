@@ -12,18 +12,21 @@ class App extends React.Component {
     super();
     this.state = {
     	data:{},
-      navigation:{}
+      navigation:{},
+      userProfile:{}
     };
   }
   componentDidMount(){
+
   	this.setState({
   		data,
       navigation:{
         logoImage:data.site.logoImage,
         firstName:data.profile.firstName
-      }
+      },
+      userProfile:data.profile
   	})
-  	  
+  	console.log(this.state)
   }
 	render(){
 		return (
@@ -34,7 +37,7 @@ class App extends React.Component {
 					<div className='app__body'>
 						<Switch>
               <Route path="/profile/:profileID">
-                <Profile user='akshay'/>
+                <Profile user={this.state.userProfile}/>
               </Route>
 
               <Route path="/details/:ID">
