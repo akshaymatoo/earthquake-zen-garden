@@ -1,13 +1,23 @@
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+  --gray: #ededed;
+}
+
 ul{
 	list-style-type: none;
 }
+img {
+	width: 2rem;
+  height: 2rem
+}
 .navigation {
-	background-color: #ededed;
+	background-color:var(--gray);
 	display: flex;
 	justify-content:space-between;
 	padding: 2em
 }
 
 .navigation__title{
-	font-size: 12em
+	font-size: 1.5em
 }

@@ -1,13 +1,13 @@
 import React  from 'react';
 import './header.css';
 
-function Header({user}) {
+function Header({profile}) {
 	return(
 		<div className="header"> 
 			<ul className="navigation">
-				<li>Home</li>
-				<li className="navigation__title"> Earthquale Zen Garden</li>
-				<li> Welcome {user}</li>
+				<li><img src={profile.logoImage}/></li>
+				<li className="navigation__title"> Earthquake Zen Garden</li>
+				<li> Welcome {profile.firstName}</li>
 			</ul>
 		</div>
 	)
