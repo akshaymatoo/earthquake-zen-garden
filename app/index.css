@@ -5,8 +5,18 @@ body {
 	box-sizing: border-box;
 	font-family: sans-serif;
 } 
+h1{
+	color:'#777777';
+}
 .app__body{
 	display: flex;
-	
 	margin:auto;
+}
+.app__table{
+	margin:auto;
+}
+
+.app__table > h2{
+	margin: 1em 0;
+	text-align: center;
 }

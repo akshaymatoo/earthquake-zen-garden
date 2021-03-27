@@ -12,7 +12,7 @@ function Header({navigation}) {
 		<div className="header"> 
 			<ul className="navigation">
 				<li><img src={navigation.logoImage} onClick={handleClick}/></li>
-				<li className="navigation__title"> Earthquake Zen Garden</li>
+				<li className="navigation__title">  {navigation.title} </li>
 
 				<Link to={`/profile/${navigation.firstName}`}>Welcome {navigation.firstName}</Link>
 			</ul>

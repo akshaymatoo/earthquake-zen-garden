@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link,useHistory } from "react-router-dom";
-
+import './table.css';
 
 function Table ({data}){
 	const history = useHistory();
@@ -11,11 +11,12 @@ function Table ({data}){
   function sortTable(e){
   	console.log('sort table called',e.target.innerText);
   	// if I am using my own sorting then I should use usememo for better performance
+
   }
 
 	return(
-		<div style={{margin:'auto'}}>
-				<table style={{ border: '1 solid #dddddd'}}>
+		<div className='table'>
+				<table>
 				<thead>
 				 <tr>
 			    <th onClick={sortTable}>Title</th>
@@ -27,7 +28,7 @@ function Table ({data}){
 				{
 					data.data.features.map( (row) => (
 						<tr key={row.id} onClick={()=> handleRowClick(row)}>
-							<td> {row.properties.title} </td>
+							<td> <a href="#">{row.properties.title} </a></td>
 							<td>{row.properties.mag} </td>
 							<td>{row.properties.time}</td>
 						</tr>
