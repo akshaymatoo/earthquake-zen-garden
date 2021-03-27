@@ -16,17 +16,17 @@ class App extends React.Component {
       userProfile:{}
     };
   }
-  componentDidMount(){
 
+  componentDidMount(){
   	this.setState({
-  		data,
+  		data:data,
       navigation:{
         logoImage:data.site.logoImage,
         firstName:data.profile.firstName
       },
       userProfile:data.profile
   	})
-  	console.log(this.state)
+  	
   }
 	render(){
 		return (
@@ -41,7 +41,7 @@ class App extends React.Component {
               </Route>
 
               <Route path="/details/:ID">
-                <Details />
+                <Details data= {data.data}/>
               </Route>
 
               <Route path="/">

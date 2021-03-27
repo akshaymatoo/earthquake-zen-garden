@@ -1,41 +1,28 @@
 import React from 'react';
 import './profile.css';
+import Card from '../components/card/card';
 
 function Profile(props){
+	let allowList = ['First name','Last name','Phone','Email','Bio'];
+	let userData = {
+		'First name':props.user.firstName,
+		'Last name':props.user.lastName,
+		'Phone':props.user.phone,
+		'Email':props.user.email,
+		'Bio':props.user.bio
+	}
 	return (
-		<>
-		<h1>Profile</h1>
-		<div className='user__container'>
-
-			<div className='user__container__left'>
-				<img src={props.user.avatarImage}/>
-			</div>
-			<div className='user__container__right'>
-				<table>
-					<tr>
-						<td>First name</td>
-						<td>{props.user.firstName}</td>
-					</tr>
-					<tr>
-						<td>Last name</td>
-						<td>{props.user.lastName}</td>
-					</tr>
-					<tr>
-						<td>Phone</td>
-						<td>{props.user.phone}</td>
-					</tr>
-					<tr>
-						<td>Email</td>
-						<td>{props.user.email}</td>
-					</tr>
-					<tr>
-						<td>Bio</td>
-						<td>{props.user.bio}</td>
-					</tr>
-				</table>
+		<div className='user__main'>
+			<h1>Profile</h1>
+			<div className='user__container'>
+				<div className='user__container__left'>
+					<img src={props.user.avatarImage}/>
+				</div>
+				<div className='user__container__right'>
+					<Card data={userData} allowList={allowList}/>
+				</div>
 			</div>
 		</div>
-		</>
 	)
 }
 

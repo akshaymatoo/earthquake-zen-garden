@@ -1,0 +1,16 @@
+.card {
+	 display: flex;
+	 flex-direction: column;
+	 align-content: flex-start;
+	 
+}
+.card__container{
+	display: flex;
+	justify-content: flex-start;
+	font-size: 1.2em;
+}
+
+.card__container__right{
+	
+	padding-left: 4em;
+}

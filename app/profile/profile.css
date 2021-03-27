@@ -1,14 +1,23 @@
-h1{
-	text-align: center;
-}
-.user__container {
+.user__main{
 	width: 40%;
+	margin: auto;
 	display: flex;
-	justify-content: space-around;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.user__container {
+	display: flex;	
 }
 
 .user__container__right{
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	margin-left: 2rem;
 }
+
+.user__container__left > img{
+	 width: 20em;
+	 height:20em;
+}
+
+ 
