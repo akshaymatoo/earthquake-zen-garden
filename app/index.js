@@ -7,6 +7,8 @@ import Profile from './profile/profile';
 import Details from './details/details';
 import Table from './components/table/table';
 import data from "../public/data"; // see how we can load via API
+import FourOhFour from './fourOhfour/fourOhfour';
+
 class App extends React.Component {
 	constructor() {
     super();
@@ -44,8 +46,12 @@ class App extends React.Component {
                 <Details data= {data.data}/>
               </Route>
 
-              <Route path="/">
+              <Route exact path="/">
                 <Table data={data}/>
+              </Route>
+
+              <Route path="*">
+                <FourOhFour />
               </Route>
             </Switch>
 					</div>
