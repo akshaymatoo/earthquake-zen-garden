@@ -41,7 +41,6 @@ function App () {
     },
   ]
 
-  
   function getStructuredData(){
    
     return data.data.features.map( (feature) => {

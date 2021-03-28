@@ -30,7 +30,7 @@ function Details( props ){
 		
 			{ 
 				(tableData.hasOwnProperty('Time'))
-				? <><h1>{tableData.Title}</h1> <Card data={tableData} allowList={allowList}/></>
+				? <><h3>{tableData.Title}</h3> <Card data={tableData} allowList={allowList}/></>
 				:<div>Table data not set</div>
 			}
 		 
