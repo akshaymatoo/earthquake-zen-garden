@@ -14,9 +14,11 @@ function Card (props){
 			    // Just to clarify: unlike object destructuring, the parameter names don't matter here.
 		     	allowList.includes(key) ?
 		    	<div key={key} className='card__container'>
-				    <span>{key}</span>
+		    		<div className='card__container__left'>
+				    	{key}
+				    </div>
 				    <div className='card__container__right'>
-				    	<span>{value}</span>
+				    	{value}
 				    </div>
 		    	</div>:null
 				))

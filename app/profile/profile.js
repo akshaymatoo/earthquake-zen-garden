@@ -13,7 +13,7 @@ function Profile(props){
 	}
 	return (
 		<div className='user__main'>
-			<h1>Profile</h1>
+			<h3>Profile</h3>
 			<div className='user__container'>
 				<div className='user__container__left'>
 					<img src={props.user.avatarImage}/>

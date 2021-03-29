@@ -1,16 +1,17 @@
 * {
-  margin:0;
+	margin:0;
+  box-sizing: border-box;
 }
+ 
 body {
-	box-sizing: border-box;
 	font-family: sans-serif;
 } 
-h1{
+h1,h2{
 	color:'#777777';
 }
 .app__body{
 	display: flex;
-	margin:auto;
+	margin:0 auto;
 }
 .app__table{
 	margin:auto;

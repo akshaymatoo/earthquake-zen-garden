@@ -8,9 +8,13 @@
 	display: flex;
 	justify-content: flex-start;
 	font-size: 1.2em;
+	padding: 0.2em;
 }
 
-.card__container__right{
-	
-	padding-left: 4em;
+.card__container__left{
+	width: 25%;
 }
+.card__container__right{
+ width: 80%;
+}
+ 

@@ -7,14 +7,14 @@ function Details( props ){
 
 	let { ID } = useParams();
 	let allowList = ['Title','Magnitude','Time','Status','Tsunami','Type']
-	const [ tableData,setTableData] = useState({});
+	const [ cardData,setCardData] = useState({});
 	 useEffect((data) => {
     let rows = props.data.features;
     let dt = rows.filter( row => {
     	if(row.id === ID) return row;
     })[0];
     
-    setTableData({
+    setCardData({
     	Title:dt.properties.title,
     	Magnitude:dt.properties.mag,
     	Time:dt.properties.time,
@@ -29,8 +29,8 @@ function Details( props ){
 		<div className='details'>
 		
 			{ 
-				(tableData.hasOwnProperty('Time'))
-				? <><h3>{tableData.Title}</h3> <Card data={tableData} allowList={allowList}/></>
+				(cardData.hasOwnProperty('Time'))
+				? <div className='details__card'><h3>{cardData.Title}</h3> <Card data={cardData} allowList={allowList}/></div>
 				:<div>Table data not set</div>
 			}
 		 

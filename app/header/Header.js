@@ -1,6 +1,7 @@
 import React  from 'react';
 import { Link,useHistory } from "react-router-dom";
 import './header.css';
+import PropTypes from 'prop-types';
 
 function Header({navigation}) {
 	let history = useHistory();
@@ -20,5 +21,9 @@ function Header({navigation}) {
 	)
 }
 
-
+Header.propTypes = {
+  logoImage: PropTypes.string,
+  firstName: PropTypes.string,
+  title:PropTypes.string
+};
 export default Header;
