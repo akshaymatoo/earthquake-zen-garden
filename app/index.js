@@ -86,7 +86,7 @@ function App () {
             <Route exact path="/">
               {
                 tableData.length
-                ? <div className='app__table'> <h2>{title}</h2><Table data={tableData} columns={columns}/></div>
+                ? <div className='app__table'> <h2 className='app__table__title'>{title}</h2><Table data={tableData} columns={columns}/></div>
                 : null
               }
             </Route>

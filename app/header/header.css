@@ -1,6 +1,4 @@
 :root {
-  --blue: #1e90ff;
-  --white: #ffffff;
   --gray: #ededed;
 }
 
@@ -19,6 +17,7 @@ img {
 }
 
 .navigation__title{
-	font-size: 1.5em;
-	color:'#777';
+	font-size: 2em;
+	color:#777777;
+	font-weight: bold;
 }

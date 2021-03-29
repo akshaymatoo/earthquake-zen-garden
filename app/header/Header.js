@@ -14,7 +14,6 @@ function Header({data}) {
 			<ul className="navigation">
 				<li><img src={data.logoImage} onClick={handleClick}/></li>
 				<li className="navigation__title">  {data.title} </li>
-
 				<Link to={`/profile/${data.firstName}`}>Welcome {data.firstName}</Link>
 			</ul>
 		</div>
