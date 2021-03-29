@@ -6,13 +6,14 @@ ul{
 	list-style-type: none;
 }
 img {
-	width: 2rem;
-  height: 2rem
+	width: 2.6rem;
+  height: 2.6rem
 }
 .navigation {
 	background-color:var(--gray);
 	display: flex;
 	justify-content:space-between;
+	align-items: center;
 	padding: 2em
 }
 

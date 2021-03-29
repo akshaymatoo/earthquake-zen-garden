@@ -2,7 +2,6 @@ import React, { useMemo } from 'react'
 import { useTable,useSortBy } from 'react-table'
 import PropTypes from 'prop-types';
 
-
 export const Table = (props) => {
   const columns = props.columns;
   const data = props.data;
@@ -23,7 +22,7 @@ export const Table = (props) => {
   )
 
   return (
-    <>
+    <div className='table'>
       <table {...getTableProps()}>
         <thead>
           {headerGroups.map(headerGroup => (
@@ -65,7 +64,7 @@ export const Table = (props) => {
           ))}
         </tfoot>
       </table>
-    </>
+    </div>
   )
 }
 

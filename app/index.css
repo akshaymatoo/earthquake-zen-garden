@@ -14,10 +14,11 @@ h1,h2{
 .app__body{
 	display: flex;
 	margin:0 auto;
+	color:#444444;
 }
 .app__table{
 	margin:auto;
-	color:#444444;
+	text-align: center;
 }
 
 .app__table > h2{

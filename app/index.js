@@ -19,9 +19,9 @@ function App () {
   let columns =[
     {
       Header: 'Title',
-      accessor: 'title',
+      accessor: 'place',
       //Cell: e =><a href={e.value}> {e.value} </a>,
-      Cell: ({ row }) => ( <Link to={{ pathname: `/details/${row.original.id}` }}>{row.original.title}</Link>)
+      Cell: ({ row }) => ( <Link to={{ pathname: `/details/${row.original.id}` }}>{row.original.place}</Link>)
     },
     {
       Header: 'Magnitude',
@@ -48,6 +48,7 @@ function App () {
       let obj = {
         id: feature.id,
         title:feature.properties.title,
+        place:feature.properties.place,
         mag:feature.properties.mag,
         time:feature.properties.time,
       }
