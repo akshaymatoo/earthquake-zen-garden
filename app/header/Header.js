@@ -3,7 +3,7 @@ import { Link,useHistory } from "react-router-dom";
 import './header.css';
 import PropTypes from 'prop-types';
 
-function Header({navigation}) {
+function Header({data}) {
 	let history = useHistory();
 
   function handleClick() {
@@ -12,18 +12,16 @@ function Header({navigation}) {
 	return(
 		<div className="header"> 
 			<ul className="navigation">
-				<li><img src={navigation.logoImage} onClick={handleClick}/></li>
-				<li className="navigation__title">  {navigation.title} </li>
+				<li><img src={data.logoImage} onClick={handleClick}/></li>
+				<li className="navigation__title">  {data.title} </li>
 
-				<Link to={`/profile/${navigation.firstName}`}>Welcome {navigation.firstName}</Link>
+				<Link to={`/profile/${data.firstName}`}>Welcome {data.firstName}</Link>
 			</ul>
 		</div>
 	)
 }
 
 Header.propTypes = {
-  logoImage: PropTypes.string,
-  firstName: PropTypes.string,
-  title:PropTypes.string
+ data:PropTypes.object.isRequired
 };
 export default Header;

@@ -1,5 +1,6 @@
 import React from 'react';
 import './card.css';
+import PropTypes from 'prop-types';
 
 function Card (props){
  	// have a similar DS for card
@@ -25,6 +26,10 @@ function Card (props){
 			}
 		</div>
 	)
+}
+Card.propTypes = {
+	data: PropTypes.object.isRequired,
+	allowList: PropTypes.array.isRequired
 }
 
 export default Card;

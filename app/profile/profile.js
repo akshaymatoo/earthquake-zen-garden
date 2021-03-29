@@ -1,6 +1,7 @@
 import React from 'react';
 import './profile.css';
 import Card from '../components/card/card';
+import PropTypes from 'prop-types';
 
 function Profile(props){
 	let allowList = ['First name','Last name','Phone','Email','Bio'];
@@ -24,6 +25,10 @@ function Profile(props){
 			</div>
 		</div>
 	)
+}
+
+Profile.propTypes = {
+	user:  PropTypes.object.isRequired,
 }
 
 export default Profile;

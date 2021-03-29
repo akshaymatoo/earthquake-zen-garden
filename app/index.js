@@ -7,7 +7,7 @@ import Header from './header/header';
 import Profile from './profile/profile';
 import Details from './details/details';
 //import Table from './components/table/table';
-import {Table} from './components/table/sortingTable';
+import {Table} from './components/table/table';
 import Data from "../public/data"; // see how we can load via API
 
 
@@ -56,12 +56,12 @@ function App () {
   }
   let [title,setTitle] = useState('');
   let [tableData,setTableData] = useState([]);
-	let [navigation,setNavigation] = useState({});
+	let [headerData,setHeaderData] = useState({});
   let [userProfile,setuserProfile] = useState({});
 
   useEffect( ()=> {
     //setNavigation
-    setNavigation({
+    setHeaderData({
         title:data.site.title,
         logoImage:data.site.logoImage,
         firstName:data.profile.firstName
@@ -74,7 +74,7 @@ function App () {
 	return (
 		<div className='app'> 
 			<Router>
-				<Header navigation={navigation}/>
+				<Header data={headerData}/>
 				<div className='app__body'>
           <Switch>
             <Route path="/profile/:profileID">

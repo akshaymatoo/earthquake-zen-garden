@@ -1,42 +1,75 @@
-import React from 'react';
-import { Link,useHistory } from "react-router-dom";
-import './table.css';
+import React, { useMemo } from 'react'
+import { useTable,useSortBy } from 'react-table'
+import PropTypes from 'prop-types';
 
-function Table ({data}){
-	const history = useHistory();
-  const handleRowClick = (row) => {
-    history.push(`/details/${row.id}`);
-  }  
 
-  function sortTable(e){
-  	console.log('sort table called',e.target.innerText);
-  	// if I am using my own sorting then I should use usememo for better performance
+export const Table = (props) => {
+  const columns = props.columns;
+  const data = props.data;
+  
+  const {
+    getTableProps,
+    getTableBodyProps,
+    headerGroups,
+    footerGroups,
+    rows,
+    prepareRow
+  } = useTable(
+    {
+      columns,
+      data
+    },
+    useSortBy
+  )
 
-  }
-
-	return(
-		<div className='table'>
-				<table>
-				<thead>
-				 <tr>
-			    <th onClick={sortTable}>Title</th>
-			    <th onClick={sortTable}>Maginitude</th>
-			    <th onClick={sortTable}>Time</th>
-			   </tr>
-			   </thead>
-			   <tbody>
-				{
-					data.data.features.map( (row) => (
-						<tr key={row.id} onClick={()=> handleRowClick(row)}>
-							<td> <a href="#">{row.properties.title} </a></td>
-							<td>{row.properties.mag} </td>
-							<td>{row.properties.time}</td>
-						</tr>
-					))
-				}
-				</tbody>
-			 </table>
-		</div>
-	)
+  return (
+    <>
+      <table {...getTableProps()}>
+        <thead>
+          {headerGroups.map(headerGroup => (
+            <tr {...headerGroup.getHeaderGroupProps()}>
+              {headerGroup.headers.map(column => (
+                <th {...column.getHeaderProps(column.getSortByToggleProps())}>
+                  {column.render('Header')}
+                  <span>
+                    {column.isSorted
+                      ? column.isSortedDesc
+                        ? ' 🔽'
+                        : ' 🔼'
+                      : ''}
+                  </span>
+                </th>
+              ))}
+            </tr>
+          ))}
+        </thead>
+        <tbody {...getTableBodyProps()}>
+          {rows.map(row => {
+            prepareRow(row)
+            return (
+              <tr {...row.getRowProps()}>
+                {row.cells.map(cell => {
+                  return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
+                })}
+              </tr>
+            )
+          })}
+        </tbody>
+        <tfoot>
+          {footerGroups.map(footerGroup => (
+            <tr {...footerGroup.getFooterGroupProps()}>
+              {footerGroup.headers.map(column => (
+                <td {...column.getFooterProps()}>{column.render('Footer')}</td>
+              ))}
+            </tr>
+          ))}
+        </tfoot>
+      </table>
+    </>
+  )
 }
-export default Table;
+
+Table.propTypes = {
+  data: PropTypes.array.isRequired,
+  columns: PropTypes.array.isRequired
+}
