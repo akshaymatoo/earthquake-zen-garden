@@ -13,11 +13,14 @@ function Details( props ){
     let dt = rows.filter( row => {
     	if(row.id === ID) return row;
     })[0];
-    
+    let o = new Intl.DateTimeFormat("en" , {
+            timeStyle: "medium",
+            dateStyle: "medium"
+    });
     setCardData({
     	Title:dt.properties.title,
     	Magnitude:dt.properties.mag,
-    	Time:dt.properties.time,
+    	Time:o.format(dt.properties.time),
     	Status:dt.properties.status,
     	Tsunami:dt.properties.tsunami,
     	Type:dt.properties.type
