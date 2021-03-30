@@ -1,11 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import FourOhFour from '../fourOhfour';
-import ErrorImage from '../../../public/404.png';
+import App from './App';
 
 describe('404', () => {
   it('renders without crashing', () => {
-    const wrapper = shallow(<FourOhFour errorImage={ErrorImage} />);
+    const wrapper = shallow(<App />);
 
     expect(wrapper).toBeTruthy();
   });

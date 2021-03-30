@@ -10,6 +10,6 @@ function FourOhFour({ errorImage }) {
   );
 }
 FourOhFour.propTypes = {
-  errorImage: PropTypes.string.isRequired,
+  errorImage: PropTypes.object.isRequired,
 };
 export default FourOhFour;
