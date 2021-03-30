@@ -10,9 +10,8 @@ function Details({ data }) {
   const [cardData, setCardData] = useState({});
   useEffect(() => {
     const rows = data.features;
-    const dt = rows.filter((row) => {
-      if (row.id === ID) return row;
-    })[0];
+    const dt = rows.filter((row) => row.id === ID)[0];
+
     const o = new Intl.DateTimeFormat('en', {
       timeStyle: 'medium',
       dateStyle: 'medium',
