@@ -10,7 +10,7 @@ import Details from './details/details';
 // import Table from './components/table/table';
 import Table from './components/table/table';
 import Data from '../public/data.json'; // see how we can load via API
-
+import ErrorImage from '../public/404.png';
 import FourOhFour from './fourOhfour/fourOhfour';
 
 function App() {
@@ -96,7 +96,7 @@ function App() {
               }
             </Route>
             <Route path="*">
-              <FourOhFour />
+              <FourOhFour errorImage={ErrorImage} />
             </Route>
           </Switch>
         </div>

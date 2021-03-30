@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import './header.css';
 import PropTypes from 'prop-types';
+
+import './header.css';
 
 function Header({ data }) {
   const history = useHistory();
