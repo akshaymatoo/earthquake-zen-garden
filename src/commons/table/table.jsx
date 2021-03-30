@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTable, useSortBy } from 'react-table';
 import PropTypes from 'prop-types';
+import './table.css';
 
 export default function Table(props) {
   const { columns } = props;

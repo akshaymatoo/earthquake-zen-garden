@@ -5,7 +5,7 @@ img {
   width: 2.6rem;
   height: 2.6rem;
 }
-.navigation {
+.header {
   background-color: #ededed;
   display: flex;
   justify-content: space-between;
@@ -13,8 +13,12 @@ img {
   padding: 2em;
 }
 
-.navigation__title {
+.header__title {
   font-size: 2em;
   color: #777777;
+  font-weight: bold;
+}
+
+.header__name {
   font-weight: bold;
 }

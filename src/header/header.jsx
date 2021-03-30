@@ -11,20 +11,22 @@ function Header({ data }) {
     history.push('/');
   }
   return (
-    <div className="header">
-      <ul className="navigation">
+    <>
+      <ul className="header">
         <li><img src={data.logoImage} onClick={handleClick} role="presentation" alt="logo" /></li>
-        <li className="navigation__title">
+        <li className="header__title">
           {' '}
           {data.title}
           {' '}
         </li>
-        <Link to={`/profile/${data.firstName}`}>
-          Welcome
-          {data.firstName}
-        </Link>
+        <div className="header__name">
+          <Link to={`/profile/${data.firstName}`}>
+            Welcome
+            {` ${data.firstName}`}
+          </Link>
+        </div>
       </ul>
-    </div>
+    </>
   );
 }
 

@@ -6,9 +6,8 @@ import {
 import Header from './header/header';
 import Profile from './profile/profile';
 import Details from './details/details';
-// import Table from './components/table/table';
 import Table from './commons/table/table';
-import Data from '../public/data.json'; // see how we can load via API
+import Data from '../public/data.json';
 import ErrorImage from '../public/404.png';
 import FourOhFour from './fourOhfour/fourOhfour';
 
@@ -58,13 +57,11 @@ function App() {
   const [userProfile, setuserProfile] = useState({});
 
   useEffect(() => {
-    // setNavigation
     setHeaderData({
       title: data.site.title,
       logoImage: data.site.logoImage,
       firstName: data.profile.firstName,
     });
-    // setUserprofile
     setuserProfile(data.profile);
     setTableData(getStructuredData());
     setTitle(data.data.metadata.title);
