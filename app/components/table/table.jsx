@@ -1,8 +1,8 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import { useTable, useSortBy } from 'react-table';
 import PropTypes from 'prop-types';
 
-export const Table = (props) => {
+export default function Table(props) {
   const { columns } = props;
   const { data } = props;
 
@@ -64,7 +64,7 @@ export const Table = (props) => {
       </table>
     </div>
   );
-};
+}
 
 Table.propTypes = {
   data: PropTypes.array.isRequired,

@@ -12,7 +12,7 @@ const options = {
   ],
 };
 module.exports = {
-  entry: './app/index.js',
+  entry: './app/index.jsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',

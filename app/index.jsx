@@ -8,8 +8,8 @@ import Header from './header/header';
 import Profile from './profile/profile';
 import Details from './details/details';
 // import Table from './components/table/table';
-import { Table } from './components/table/table';
-import Data from '../public/data'; // see how we can load via API
+import Table from './components/table/table';
+import Data from '../public/data.json'; // see how we can load via API
 
 import FourOhFour from './fourOhfour/fourOhfour';
 
@@ -20,6 +20,7 @@ function App() {
       Header: 'Title',
       accessor: 'place',
       // Cell: e =><a href={e.value}> {e.value} </a>,
+      // eslint-disable-next-line react/prop-types
       Cell: ({ row }) => (<Link to={{ pathname: `/details/${row.original.id}` }}>{row.original.place}</Link>),
     },
     {
