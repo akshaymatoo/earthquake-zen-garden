@@ -1,33 +1,33 @@
-import React, { useMemo } from 'react'
-import { useTable,useSortBy } from 'react-table'
+import React, { useMemo } from 'react';
+import { useTable, useSortBy } from 'react-table';
 import PropTypes from 'prop-types';
 
 export const Table = (props) => {
-  const columns = props.columns;
-  const data = props.data;
-  
+  const { columns } = props;
+  const { data } = props;
+
   const {
     getTableProps,
     getTableBodyProps,
     headerGroups,
     footerGroups,
     rows,
-    prepareRow
+    prepareRow,
   } = useTable(
     {
       columns,
-      data
+      data,
     },
-    useSortBy
-  )
+    useSortBy,
+  );
 
   return (
-    <div className='table'>
+    <div className="table">
       <table {...getTableProps()}>
         <thead>
-          {headerGroups.map(headerGroup => (
+          {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>
-              {headerGroup.headers.map(column => (
+              {headerGroup.headers.map((column) => (
                 <th {...column.getHeaderProps(column.getSortByToggleProps())}>
                   {column.render('Header')}
                   <span>
@@ -43,21 +43,19 @@ export const Table = (props) => {
           ))}
         </thead>
         <tbody {...getTableBodyProps()}>
-          {rows.map(row => {
-            prepareRow(row)
+          {rows.map((row) => {
+            prepareRow(row);
             return (
               <tr {...row.getRowProps()}>
-                {row.cells.map(cell => {
-                  return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
-                })}
+                {row.cells.map((cell) => <td {...cell.getCellProps()}>{cell.render('Cell')}</td>)}
               </tr>
-            )
+            );
           })}
         </tbody>
         <tfoot>
-          {footerGroups.map(footerGroup => (
+          {footerGroups.map((footerGroup) => (
             <tr {...footerGroup.getFooterGroupProps()}>
-              {footerGroup.headers.map(column => (
+              {footerGroup.headers.map((column) => (
                 <td {...column.getFooterProps()}>{column.render('Footer')}</td>
               ))}
             </tr>
@@ -65,10 +63,10 @@ export const Table = (props) => {
         </tfoot>
       </table>
     </div>
-  )
-}
+  );
+};
 
 Table.propTypes = {
   data: PropTypes.array.isRequired,
-  columns: PropTypes.array.isRequired
-}
+  columns: PropTypes.array.isRequired,
+};
