@@ -1,7 +1,7 @@
 import React from 'react';
 import './profile.css';
 import PropTypes from 'prop-types';
-import Card from '../components/card/card';
+import Card from '../commons/card/card';
 
 function Profile({ user }) {
   const allowList = ['First name', 'Last name', 'Phone', 'Email', 'Bio'];

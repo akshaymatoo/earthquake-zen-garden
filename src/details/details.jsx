@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import Card from '../components/card/card';
+import Card from '../commons/card/card';
 import './details.css';
 
 function Details({ data }) {

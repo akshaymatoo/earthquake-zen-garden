@@ -7,7 +7,7 @@ import Header from './header/header';
 import Profile from './profile/profile';
 import Details from './details/details';
 // import Table from './components/table/table';
-import Table from './components/table/table';
+import Table from './commons/table/table';
 import Data from '../public/data.json'; // see how we can load via API
 import ErrorImage from '../public/404.png';
 import FourOhFour from './fourOhfour/fourOhfour';
