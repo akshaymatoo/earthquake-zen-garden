@@ -82,7 +82,7 @@ function App() {
               {
                 tableData.length
                   ? (
-                    <div className="app__table">
+                    <div title="main-table" className="app__table">
                       {' '}
                       <h2 className="app__table__title">{title}</h2>
                       <Table data={tableData} columns={columns} />

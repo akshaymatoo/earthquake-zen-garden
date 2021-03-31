@@ -5,7 +5,7 @@ import './fourOhfour.css';
 function FourOhFour({ errorImage }) {
   return (
     <div className="error">
-      <img src={errorImage} alt="404 not found" />
+      <img data-testid="404-image" src={errorImage} alt="404 not found" />
     </div>
   );
 }

@@ -13,3 +13,7 @@ Go to the root directory and run `npm run build`. You will see a folder being cr
 # How to run eslint
 
 run the command `npm run lint`. Another option is if you are on Vscode enable ESLint and it keep giving erros while the code is written.
+
+# How to test
+
+run the command `npm run test`. This project has two basic tests done by `react-testing-library`
